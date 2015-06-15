@@ -26,6 +26,7 @@
 		"grunt-contrib-jshint": "^0.11.1",
 		"grunt-contrib-qunit": "^0.7.0",
 		"grunt-contrib-uglify": "^0.8.1",
+    "grunt-contrib-sass": "^0.8.1",
 		"matchdep": "^0.3.0"
 	},
   "homepage": "https://github.com/WebPlay/ion-contrib-xtra#readme"

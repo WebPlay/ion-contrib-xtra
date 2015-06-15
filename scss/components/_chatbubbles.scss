@@ -1,0 +1,42 @@
+.xtra-chat-bubbles {
+	
+	&:after {
+		content: " ";
+	   	visibility: hidden;
+	   	display: block;
+	   	height: 0;
+	   	clear: both;
+	}
+	
+	.xtra-chat-bubble {
+		background-color: $chat-bubble-response-background-color;
+		color:white;
+		
+		border-radius: 20px;
+		min-height: 22px;
+		font-size: 18px;
+		
+		
+		
+		&.xtra-chat-response {
+			float:left;
+			
+			&:after {
+				content: "";
+				width: 100%;
+			}
+		}
+		
+		&.xtra-chat-request {
+			float:right;
+			background-color: #35BA25;
+		}
+		
+		p {
+			padding: 10px 15px 0;
+		}
+	}
+	
+	
+	
+}

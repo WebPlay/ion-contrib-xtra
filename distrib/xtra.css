@@ -1,0 +1,24 @@
+.xtra-chat-bubbles:after {
+  content: " ";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both; }
+.xtra-chat-bubbles .xtra-chat-bubble {
+  background-color: #0382FE;
+  color: white;
+  border-radius: 20px;
+  min-height: 22px;
+  font-size: 18px; }
+  .xtra-chat-bubbles .xtra-chat-bubble.xtra-chat-response {
+    float: left; }
+    .xtra-chat-bubbles .xtra-chat-bubble.xtra-chat-response:after {
+      content: "";
+      width: 100%; }
+  .xtra-chat-bubbles .xtra-chat-bubble.xtra-chat-request {
+    float: right;
+    background-color: #35BA25; }
+  .xtra-chat-bubbles .xtra-chat-bubble p {
+    padding: 10px 15px 0; }
+
+/*# sourceMappingURL=xtra.css.map */

@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         '<%= grunt.template.today("yyyy-mm-dd") %> \n' +
         ' *  License: <%= pkg.license %> */\n';
 
-    var latest = 'sdk';
+    var latest = 'xtra';
     var name = '<%= pkg.name %>-v<%= pkg.version%>';
 
     devRelease = 'distrib/' + name + '.js';
@@ -30,8 +30,27 @@ module.exports = function(grunt) {
             smMinified: { // source map of minified release file
                 src: sourceMapMin,
                 dest: lSourceMapMin
+            },
+            junk: { //For testing purposes
+                src: lDevRelease,
+                dest: './junk/www/lib/xtra/js/xtra.js'
+            },
+            junkSass: {
+                src: 'distrib/xtra.css',
+                dest: './junk/www/lib/xtra/css/xtra.css'
             }
         },
+        sass : {
+            src: {
+                files: [{
+                    expand: true,
+                    cwd: 'scss/',
+                    src: ['*.scss'],
+                    dest: 'distrib/',
+                    ext: '.css'
+                }]
+            }               
+        } ,
         concat: {
             options: {
                 banner: bannerContent
@@ -73,5 +92,5 @@ module.exports = function(grunt) {
         }
     );
 
-    grunt.registerTask('build', ['jshint', 'concat', 'uglify', 'copy']);
+    grunt.registerTask('build', ['jshint', 'concat', 'uglify', 'sass', 'copy']);
 };
